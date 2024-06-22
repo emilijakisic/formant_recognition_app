@@ -1,0 +1,12 @@
+services:
+  - id: backend
+    name: flask-api
+    env: python=3.10.4
+    buildCommand: pip install -r requirements.txt
+    runCommand: python app.py
+
+  - id: frontend
+    name: streamlit-app
+    env: python=3.10.4
+    buildCommand: pip install -r requirements.txt
+    runCommand: streamlit run Streamlitapp1.py
